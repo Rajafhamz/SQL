@@ -12,3 +12,13 @@ SELECT
     WHEN A <> B and B <> C THEN 'Scalene'
   END tuple
 FROM TRIANGLES;
+
+#
+SELECT concat(Name,'(', LEFT(Occupation,1),')')
+FROM OCCUPATIONS
+ORDER BY Name;
+
+SELECT concat('There are a total of ',count(Occupation),' ',lower(Occupation),'s.')
+FROM OCCUPATIONS
+GROUP BY Occupation
+ORDER BY count(Occupation);
