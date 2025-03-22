@@ -7,7 +7,7 @@ WITH actual_table AS (
     FROM EMPLOYEES
 ),
     adjusted_table AS (
-    SELECT AVG(CAST(REPLACE(CAST(Salary AS CHAR), '0', '') AS SIGNED)) AS           adjusted_salary
+    SELECT AVG(CAST(REPLACE(CAST(Salary AS CHAR), '0', '') AS SIGNED)) AS adjusted_salary
     FROM EMPLOYEES
 )
 SELECT 
